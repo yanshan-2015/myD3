@@ -62,7 +62,8 @@ module.exports = {
     },
     resolve: {
         alias: {
-            'jquery': __dirname +'/src/js/lib/jQuery1.11.3.min.js'
+            'jquery': __dirname +'/src/js/lib/jQuery1.11.3.min.js',
+            'd3': __dirname + '/src/js/lib/d3.js'
         }
     },
     plugins: [
@@ -73,7 +74,8 @@ module.exports = {
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
-            jquery: 'jquery'
+            jquery: 'jquery',
+            d: 'd3'
         }),
         new OpenBrowserPlugin({
             url: 'http://localhost:3000/views/index.html'
